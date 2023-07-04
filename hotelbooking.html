@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hotel Booking</title>
+  <link rel="stylesheet" href="hotelbooking.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Hotel Booking Form</h2>
+    <form id="bookingForm">
+      <div class="form-group">
+        <label for="customerName">Customer Name</label>
+        <input type="text" id="customerName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="checkInDate">Check-in Date</label>
+        <input type="date" id="checkInDate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="totalDays">Total Number of Days</label>
+        <input type="number" id="totalDays" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="totalPersons">Total Number of Persons</label>
+        <input type="number" id="totalPersons" min="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="roomType">Room Type</label>
+        <select id="roomType">
+          <option value="deluxe">Deluxe Room(2500)</option>
+          <option value="suite">Suite Room(4000)</option>
+          <p><b>Note:</b> Upto two persons the cost is same. Cost for Extra Person per Day <strong>1000</strong></p>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="amenities">Amenities</label>
+        <input type="checkbox" id="amenitiesAC">
+        <label for="amenitiesAC">AC(1000)</label>
+        <input type="checkbox" id="amenitiesLocker">
+        <label for="amenitiesLocker">Locker(300)</label>
+      </div>
+
+      <div class="form-group">
+        <label for="advancePayment">Advance Payment</label>
+        <input type="number" id="advancePayment" min="0" required>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Book Now" onclick="calculateTotalCost(event)" onclick="alert">
+      </div>
+
+      <div class="form-group">
+        <label for="balanceAmount">Balance Amount</label>
+        <input type="number" id="balanceAmount" min="0" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="totalCost">Total Cost</label>
+        <input type="number" id="totalCost" min="0" readonly>
+      </div>
+    </form>
+  </div>
+
+  <script src="hotelbooking.js"></script>
+</body>
+</html>
